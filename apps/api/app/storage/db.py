@@ -10,7 +10,13 @@ from app.schemas.problem import ProblemDocument, Assignment, RunConfig
 from app.schemas.runs import RunRecord, ValidationReport
 from app.schemas.events import MetricsSnapshot
 
-DB_PATH = Path("examcraft.db")
+DB_ENV = os.environ.get("EXAMCRAFT_DB_PATH")
+if DB_ENV:
+    DB_PATH = Path(DB_ENV)
+elif os.environ.get("VERCEL"):
+    DB_PATH = Path("/tmp/examcraft.db")
+else:
+    DB_PATH = Path("examcraft.db")
 
 
 def get_db_connection() -> sqlite3.Connection:
