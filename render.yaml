@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: examcraft-api
+    runtime: python
+    buildCommand: pip install -r apps/api/requirements.txt
+    startCommand: uvicorn app.main:app --app-dir apps/api --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.0
