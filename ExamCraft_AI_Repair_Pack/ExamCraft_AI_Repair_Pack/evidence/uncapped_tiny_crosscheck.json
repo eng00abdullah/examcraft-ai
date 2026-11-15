@@ -1,0 +1,245 @@
+{
+  "seed": 1827,
+  "cases": [
+    {
+      "case": 0,
+      "course_count": 2,
+      "status": "SUCCEEDED",
+      "oracle_optimum": 3
+    },
+    {
+      "case": 1,
+      "course_count": 2,
+      "status": "SUCCEEDED",
+      "oracle_optimum": 1
+    },
+    {
+      "case": 2,
+      "course_count": 1,
+      "status": "SUCCEEDED",
+      "oracle_optimum": 0
+    },
+    {
+      "case": 3,
+      "course_count": 3,
+      "status": "INFEASIBLE",
+      "oracle_optimum": null
+    },
+    {
+      "case": 4,
+      "course_count": 2,
+      "status": "SUCCEEDED",
+      "oracle_optimum": 0
+    },
+    {
+      "case": 5,
+      "course_count": 2,
+      "status": "SUCCEEDED",
+      "oracle_optimum": 3
+    },
+    {
+      "case": 6,
+      "course_count": 2,
+      "status": "SUCCEEDED",
+      "oracle_optimum": 0
+    },
+    {
+      "case": 7,
+      "course_count": 1,
+      "status": "SUCCEEDED",
+      "oracle_optimum": 0
+    },
+    {
+      "case": 8,
+      "course_count": 2,
+      "status": "SUCCEEDED",
+      "oracle_optimum": 0
+    },
+    {
+      "case": 9,
+      "course_count": 1,
+      "status": "SUCCEEDED",
+      "oracle_optimum": 0
+    },
+    {
+      "case": 10,
+      "course_count": 2,
+      "status": "SUCCEEDED",
+      "oracle_optimum": 1
+    },
+    {
+      "case": 11,
+      "course_count": 2,
+      "status": "INFEASIBLE",
+      "oracle_optimum": null
+    },
+    {
+      "case": 12,
+      "course_count": 1,
+      "status": "SUCCEEDED",
+      "oracle_optimum": 1
+    },
+    {
+      "case": 13,
+      "course_count": 1,
+      "status": "SUCCEEDED",
+      "oracle_optimum": 0
+    },
+    {
+      "case": 14,
+      "course_count": 1,
+      "status": "SUCCEEDED",
+      "oracle_optimum": 3
+    },
+    {
+      "case": 15,
+      "course_count": 3,
+      "status": "INFEASIBLE",
+      "oracle_optimum": null
+    },
+    {
+      "case": 16,
+      "course_count": 2,
+      "status": "INFEASIBLE",
+      "oracle_optimum": null
+    },
+    {
+      "case": 17,
+      "course_count": 3,
+      "status": "SUCCEEDED",
+      "oracle_optimum": 6
+    },
+    {
+      "case": 18,
+      "course_count": 2,
+      "status": "SUCCEEDED",
+      "oracle_optimum": 0
+    },
+    {
+      "case": 19,
+      "course_count": 2,
+      "status": "INFEASIBLE",
+      "oracle_optimum": null
+    },
+    {
+      "case": 20,
+      "course_count": 3,
+      "status": "INFEASIBLE",
+      "oracle_optimum": null
+    },
+    {
+      "case": 21,
+      "course_count": 3,
+      "status": "INFEASIBLE",
+      "oracle_optimum": null
+    },
+    {
+      "case": 22,
+      "course_count": 3,
+      "status": "INFEASIBLE",
+      "oracle_optimum": null
+    },
+    {
+      "case": 23,
+      "course_count": 3,
+      "status": "SUCCEEDED",
+      "oracle_optimum": 3
+    },
+    {
+      "case": 24,
+      "course_count": 3,
+      "status": "INFEASIBLE",
+      "oracle_optimum": null
+    },
+    {
+      "case": 25,
+      "course_count": 3,
+      "status": "SUCCEEDED",
+      "oracle_optimum": 1
+    },
+    {
+      "case": 26,
+      "course_count": 2,
+      "status": "SUCCEEDED",
+      "oracle_optimum": 3
+    },
+    {
+      "case": 27,
+      "course_count": 1,
+      "status": "SUCCEEDED",
+      "oracle_optimum": 6
+    },
+    {
+      "case": 28,
+      "course_count": 2,
+      "status": "INFEASIBLE",
+      "oracle_optimum": null
+    },
+    {
+      "case": 29,
+      "course_count": 3,
+      "status": "INFEASIBLE",
+      "oracle_optimum": null
+    },
+    {
+      "case": 30,
+      "course_count": 3,
+      "status": "SUCCEEDED",
+      "oracle_optimum": 0
+    },
+    {
+      "case": 31,
+      "course_count": 3,
+      "status": "INFEASIBLE",
+      "oracle_optimum": null
+    },
+    {
+      "case": 32,
+      "course_count": 2,
+      "status": "SUCCEEDED",
+      "oracle_optimum": 2
+    },
+    {
+      "case": 33,
+      "course_count": 2,
+      "status": "INFEASIBLE",
+      "oracle_optimum": null
+    },
+    {
+      "case": 34,
+      "course_count": 2,
+      "status": "SUCCEEDED",
+      "oracle_optimum": 0
+    },
+    {
+      "case": 35,
+      "course_count": 1,
+      "status": "SUCCEEDED",
+      "oracle_optimum": 3
+    },
+    {
+      "case": 36,
+      "course_count": 3,
+      "status": "INFEASIBLE",
+      "oracle_optimum": null
+    },
+    {
+      "case": 37,
+      "course_count": 3,
+      "status": "SUCCEEDED",
+      "oracle_optimum": 33
+    },
+    {
+      "case": 38,
+      "course_count": 2,
+      "status": "INFEASIBLE",
+      "oracle_optimum": null
+    },
+    {
+      "case": 39,
+      "course_count": 3,
+      "status": "INFEASIBLE",
+      "oracle_optimum": null
+    }
+  ]
+}

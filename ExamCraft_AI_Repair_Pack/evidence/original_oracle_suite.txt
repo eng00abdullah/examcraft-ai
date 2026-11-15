@@ -1,0 +1,20 @@
+test_course_codes_are_trimmed_case_insensitive_and_nonblank (test_oracle.IndependentOracleTests.test_course_codes_are_trimmed_case_insensitive_and_nonblank) ... ok
+test_duplicate_enrollment_and_unknown_reference (test_oracle.IndependentOracleTests.test_duplicate_enrollment_and_unknown_reference) ... ok
+test_duplicate_or_missing_course_is_not_complete (test_oracle.IndependentOracleTests.test_duplicate_or_missing_course_is_not_complete) ... ok
+test_duration_and_allowlist (test_oracle.IndependentOracleTests.test_duration_and_allowlist) ... ok
+test_empty_domains_are_infeasible_but_empty_courses_are_not_runnable (test_oracle.IndependentOracleTests.test_empty_domains_are_infeasible_but_empty_courses_are_not_runnable) ... ok
+test_fixture_expectations (test_oracle.IndependentOracleTests.test_fixture_expectations) ... ok
+test_hard_daily_limit_differs_from_soft_penalty (test_oracle.IndependentOracleTests.test_hard_daily_limit_differs_from_soft_penalty) ... ok
+test_minimum_hard_break (test_oracle.IndependentOracleTests.test_minimum_hard_break) ... ok
+test_negative_weight_and_boolean_capacity_rejected (test_oracle.IndependentOracleTests.test_negative_weight_and_boolean_capacity_rejected) ... ok
+test_oracle_limits_are_enforced (test_oracle.IndependentOracleTests.test_oracle_limits_are_enforced) ... ok
+test_required_names_and_problem_metadata_are_nonblank (test_oracle.IndependentOracleTests.test_required_names_and_problem_metadata_are_nonblank) ... ok
+test_room_overlap_without_shared_students (test_oracle.IndependentOracleTests.test_room_overlap_without_shared_students) ... ok
+test_room_spare_seats_have_separate_penalty (test_oracle.IndependentOracleTests.test_room_spare_seats_have_separate_penalty) ... ok
+test_short_gap_threshold_is_strict (test_oracle.IndependentOracleTests.test_short_gap_threshold_is_strict) ... ok
+test_unknown_assignment_is_invalid (test_oracle.IndependentOracleTests.test_unknown_assignment_is_invalid) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.014s
+
+OK

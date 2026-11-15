@@ -1,0 +1,147 @@
+Testing existing project: /workspace/scratch/adcf59066b40/review/examcraft_source
+These tests assert correct behavior. Failure is expected on the reviewed baseline.
+test_already_generated_goal_does_not_consume_another_expansion (test_engine_regressions.EngineRegressionTests.test_already_generated_goal_does_not_consume_another_expansion) ... 
+  test_already_generated_goal_does_not_consume_another_expansion (test_engine_regressions.EngineRegressionTests.test_already_generated_goal_does_not_consume_another_expansion) (limits={'max_generated_nodes': 2}) ... FAIL
+  test_already_generated_goal_does_not_consume_another_expansion (test_engine_regressions.EngineRegressionTests.test_already_generated_goal_does_not_consume_another_expansion) (limits={'max_expanded_nodes': 1}) ... FAIL
+test_boolean_room_capacity_is_rejected_without_coercion (test_engine_regressions.EngineRegressionTests.test_boolean_room_capacity_is_rejected_without_coercion) ... FAIL
+test_dst_elapsed_break_is_checked_independently_and_by_engine (test_engine_regressions.EngineRegressionTests.test_dst_elapsed_break_is_checked_independently_and_by_engine) ... 
+  test_dst_elapsed_break_is_checked_independently_and_by_engine (test_engine_regressions.EngineRegressionTests.test_dst_elapsed_break_is_checked_independently_and_by_engine) (component='complete_validator') ... FAIL
+  test_dst_elapsed_break_is_checked_independently_and_by_engine (test_engine_regressions.EngineRegressionTests.test_dst_elapsed_break_is_checked_independently_and_by_engine) (component='search_engine') ... FAIL
+test_frontier_cap_cannot_prove_a_feasible_problem_infeasible (test_engine_regressions.EngineRegressionTests.test_frontier_cap_cannot_prove_a_feasible_problem_infeasible) ... FAIL
+test_frontier_cap_cannot_return_a_suboptimal_exact_astar_success (test_engine_regressions.EngineRegressionTests.test_frontier_cap_cannot_return_a_suboptimal_exact_astar_success) ... FAIL
+test_generated_node_budget_is_never_exceeded (test_engine_regressions.EngineRegressionTests.test_generated_node_budget_is_never_exceeded) ... FAIL
+test_uncapped_astar_matches_independent_zero_optimum (test_engine_regressions.EngineRegressionTests.test_uncapped_astar_matches_independent_zero_optimum) ... ok
+test_actual_active_run_survives_process_restart_as_interrupted (test_lifecycle_regressions.LifecycleRegressionTests.test_actual_active_run_survives_process_restart_as_interrupted) ... FAIL
+test_pause_cannot_resurrect_a_completed_run (test_lifecycle_regressions.LifecycleRegressionTests.test_pause_cannot_resurrect_a_completed_run) ... FAIL
+test_success_event_is_published_only_after_validation_and_persistence (test_lifecycle_regressions.LifecycleRegressionTests.test_success_event_is_published_only_after_validation_and_persistence) ... FAIL
+test_teaching_delay_does_not_consume_compute_budget (test_lifecycle_regressions.LifecycleRegressionTests.test_teaching_delay_does_not_consume_compute_budget) ... FAIL
+test_wall_deadline_terminates_an_abandoned_paused_session (test_lifecycle_regressions.LifecycleRegressionTests.test_wall_deadline_terminates_an_abandoned_paused_session) ... FAIL
+
+======================================================================
+FAIL: test_already_generated_goal_does_not_consume_another_expansion (test_engine_regressions.EngineRegressionTests.test_already_generated_goal_does_not_consume_another_expansion) (limits={'max_generated_nodes': 2})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/adcf59066b40/review/ExamCraft_AI_Repair_Pack/tests/test_engine_regressions.py", line 129, in test_already_generated_goal_does_not_consume_another_expansion
+    self.assertEqual(final.status, "SUCCEEDED")
+AssertionError: 'LIMIT_REACHED' != 'SUCCEEDED'
+- LIMIT_REACHED
++ SUCCEEDED
+
+
+======================================================================
+FAIL: test_already_generated_goal_does_not_consume_another_expansion (test_engine_regressions.EngineRegressionTests.test_already_generated_goal_does_not_consume_another_expansion) (limits={'max_expanded_nodes': 1})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/adcf59066b40/review/ExamCraft_AI_Repair_Pack/tests/test_engine_regressions.py", line 129, in test_already_generated_goal_does_not_consume_another_expansion
+    self.assertEqual(final.status, "SUCCEEDED")
+AssertionError: 'LIMIT_REACHED' != 'SUCCEEDED'
+- LIMIT_REACHED
++ SUCCEEDED
+
+
+======================================================================
+FAIL: test_boolean_room_capacity_is_rejected_without_coercion (test_engine_regressions.EngineRegressionTests.test_boolean_room_capacity_is_rejected_without_coercion)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/adcf59066b40/review/ExamCraft_AI_Repair_Pack/tests/test_engine_regressions.py", line 160, in test_boolean_room_capacity_is_rejected_without_coercion
+    self.assertTrue(
+AssertionError: [] is not true : Boolean capacity must not be silently converted to integer 1
+
+======================================================================
+FAIL: test_dst_elapsed_break_is_checked_independently_and_by_engine (test_engine_regressions.EngineRegressionTests.test_dst_elapsed_break_is_checked_independently_and_by_engine) (component='complete_validator')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/adcf59066b40/review/ExamCraft_AI_Repair_Pack/tests/test_engine_regressions.py", line 148, in test_dst_elapsed_break_is_checked_independently_and_by_engine
+    self.assertFalse(checked["valid"], "UTC elapsed break must govern validity")
+AssertionError: True is not false : UTC elapsed break must govern validity
+
+======================================================================
+FAIL: test_dst_elapsed_break_is_checked_independently_and_by_engine (test_engine_regressions.EngineRegressionTests.test_dst_elapsed_break_is_checked_independently_and_by_engine) (component='search_engine')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/adcf59066b40/review/ExamCraft_AI_Repair_Pack/tests/test_engine_regressions.py", line 151, in test_dst_elapsed_break_is_checked_independently_and_by_engine
+    self.assertEqual(final.status, "INFEASIBLE")
+AssertionError: 'SUCCEEDED' != 'INFEASIBLE'
+- SUCCEEDED
++ INFEASIBLE
+
+
+======================================================================
+FAIL: test_frontier_cap_cannot_prove_a_feasible_problem_infeasible (test_engine_regressions.EngineRegressionTests.test_frontier_cap_cannot_prove_a_feasible_problem_infeasible)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/adcf59066b40/review/ExamCraft_AI_Repair_Pack/tests/test_engine_regressions.py", line 98, in test_frontier_cap_cannot_prove_a_feasible_problem_infeasible
+    self.assertIn(
+AssertionError: 'INFEASIBLE' not found in ('LIMIT_REACHED', 'SUCCEEDED') : A dropped unexplored branch does not establish global infeasibility
+
+======================================================================
+FAIL: test_frontier_cap_cannot_return_a_suboptimal_exact_astar_success (test_engine_regressions.EngineRegressionTests.test_frontier_cap_cannot_return_a_suboptimal_exact_astar_success)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/adcf59066b40/review/ExamCraft_AI_Repair_Pack/tests/test_engine_regressions.py", line 87, in test_frontier_cap_cannot_return_a_suboptimal_exact_astar_success
+    self.assertEqual(
+AssertionError: 130 != 0 : Discarding frontier branches must not produce an exact A* success
+
+======================================================================
+FAIL: test_generated_node_budget_is_never_exceeded (test_engine_regressions.EngineRegressionTests.test_generated_node_budget_is_never_exceeded)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/adcf59066b40/review/ExamCraft_AI_Repair_Pack/tests/test_engine_regressions.py", line 110, in test_generated_node_budget_is_never_exceeded
+    self.assertLessEqual(
+AssertionError: 3 not less than or equal to 2 : Buffered children must consume generation budget before allocation
+
+======================================================================
+FAIL: test_actual_active_run_survives_process_restart_as_interrupted (test_lifecycle_regressions.LifecycleRegressionTests.test_actual_active_run_survives_process_restart_as_interrupted)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/adcf59066b40/review/ExamCraft_AI_Repair_Pack/tests/test_lifecycle_regressions.py", line 151, in test_actual_active_run_survives_process_restart_as_interrupted
+    self.assertIsNotNone(persisted, "A real active run must be durable before the backend can crash")
+AssertionError: unexpectedly None : A real active run must be durable before the backend can crash
+
+======================================================================
+FAIL: test_pause_cannot_resurrect_a_completed_run (test_lifecycle_regressions.LifecycleRegressionTests.test_pause_cannot_resurrect_a_completed_run)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/adcf59066b40/review/ExamCraft_AI_Repair_Pack/tests/test_lifecycle_regressions.py", line 222, in test_pause_cannot_resurrect_a_completed_run
+    self.assertEqual(session.status, "SUCCEEDED", "A late pause must not overwrite terminal state with PAUSED")
+AssertionError: 'PAUSED' != 'SUCCEEDED'
+- PAUSED
++ SUCCEEDED
+ : A late pause must not overwrite terminal state with PAUSED
+
+======================================================================
+FAIL: test_success_event_is_published_only_after_validation_and_persistence (test_lifecycle_regressions.LifecycleRegressionTests.test_success_event_is_published_only_after_validation_and_persistence)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/adcf59066b40/review/ExamCraft_AI_Repair_Pack/tests/test_lifecycle_regressions.py", line 186, in test_success_event_is_published_only_after_validation_and_persistence
+    self.assertEqual(observed["status"], "SUCCEEDED", "Terminal event must agree with the authoritative run record")
+AssertionError: 'RUNNING' != 'SUCCEEDED'
+- RUNNING
++ SUCCEEDED
+ : Terminal event must agree with the authoritative run record
+
+======================================================================
+FAIL: test_teaching_delay_does_not_consume_compute_budget (test_lifecycle_regressions.LifecycleRegressionTests.test_teaching_delay_does_not_consume_compute_budget)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/adcf59066b40/review/ExamCraft_AI_Repair_Pack/tests/test_lifecycle_regressions.py", line 104, in test_teaching_delay_does_not_consume_compute_budget
+    self.assertEqual(
+AssertionError: 'LIMIT_REACHED' != 'SUCCEEDED'
+- LIMIT_REACHED
++ SUCCEEDED
+ : Teaching sleeps must not turn an otherwise sub-budget search into LIMIT_REACHED
+
+======================================================================
+FAIL: test_wall_deadline_terminates_an_abandoned_paused_session (test_lifecycle_regressions.LifecycleRegressionTests.test_wall_deadline_terminates_an_abandoned_paused_session)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/adcf59066b40/review/ExamCraft_AI_Repair_Pack/tests/test_lifecycle_regressions.py", line 197, in test_wall_deadline_terminates_an_abandoned_paused_session
+    self.wait_for(lambda: session.status in TERMINAL, timeout=1.2,
+  File "/workspace/scratch/adcf59066b40/review/ExamCraft_AI_Repair_Pack/tests/test_lifecycle_regressions.py", line 89, in wait_for
+    self.fail(message)
+AssertionError: Paused session ignored max_wall_seconds and kept its worker alive
+
+----------------------------------------------------------------------
+Ran 12 tests in 2.595s
+
+FAILED (failures=13)

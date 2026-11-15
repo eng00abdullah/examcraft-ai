@@ -1,0 +1,228 @@
+{
+  "schema_version": "1.0",
+  "run_id": "run_sample_demo_small",
+  "problem_revision_id": "rev_demo_small",
+  "problem_hash": "ddeabc11465af8dd8af0b6e4ba4c6998a219ec2d7f0bae67bbf9124deddf29b2",
+  "algorithm": "astar",
+  "status": "SUCCEEDED",
+  "optimality_proven": true,
+  "is_filtered": false,
+  "total_assignments_count": 4,
+  "exported_assignments_count": 4,
+  "assignments": [
+    {
+      "course_id": "A",
+      "slot_id": "D1_AM",
+      "room_id": "R1"
+    },
+    {
+      "course_id": "B",
+      "slot_id": "D1_PM",
+      "room_id": "R1"
+    },
+    {
+      "course_id": "C",
+      "slot_id": "D2_AM",
+      "room_id": "R1"
+    },
+    {
+      "course_id": "D",
+      "slot_id": "D2_PM",
+      "room_id": "R1"
+    }
+  ],
+  "problem": {
+    "schema_version": "1.0",
+    "id": "demo_small",
+    "name": "Demo Small",
+    "timezone": "Africa/Cairo",
+    "courses": [
+      {
+        "id": "A",
+        "code": "CS100",
+        "name": "Artificial Intelligence",
+        "duration_minutes": 60,
+        "allowed_slot_ids": null
+      },
+      {
+        "id": "B",
+        "code": "CS101",
+        "name": "Algorithms",
+        "duration_minutes": 60,
+        "allowed_slot_ids": null
+      },
+      {
+        "id": "C",
+        "code": "CS102",
+        "name": "Database Systems",
+        "duration_minutes": 60,
+        "allowed_slot_ids": null
+      },
+      {
+        "id": "D",
+        "code": "CS103",
+        "name": "Software Engineering",
+        "duration_minutes": 60,
+        "allowed_slot_ids": null
+      }
+    ],
+    "students": [
+      {
+        "id": "S1",
+        "display_name": "Sample Student S1"
+      },
+      {
+        "id": "S2",
+        "display_name": "Sample Student S2"
+      },
+      {
+        "id": "S3",
+        "display_name": "Sample Student S3"
+      },
+      {
+        "id": "S4",
+        "display_name": "Sample Student S4"
+      },
+      {
+        "id": "S5",
+        "display_name": "Sample Student S5"
+      },
+      {
+        "id": "S6",
+        "display_name": "Sample Student S6"
+      }
+    ],
+    "enrollments": [
+      {
+        "student_id": "S1",
+        "course_id": "A"
+      },
+      {
+        "student_id": "S1",
+        "course_id": "B"
+      },
+      {
+        "student_id": "S2",
+        "course_id": "A"
+      },
+      {
+        "student_id": "S2",
+        "course_id": "C"
+      },
+      {
+        "student_id": "S3",
+        "course_id": "A"
+      },
+      {
+        "student_id": "S3",
+        "course_id": "D"
+      },
+      {
+        "student_id": "S4",
+        "course_id": "B"
+      },
+      {
+        "student_id": "S4",
+        "course_id": "C"
+      },
+      {
+        "student_id": "S5",
+        "course_id": "B"
+      },
+      {
+        "student_id": "S5",
+        "course_id": "D"
+      },
+      {
+        "student_id": "S6",
+        "course_id": "C"
+      },
+      {
+        "student_id": "S6",
+        "course_id": "D"
+      }
+    ],
+    "slots": [
+      {
+        "id": "D1_AM",
+        "date": "2026-12-01",
+        "start_time": "09:00",
+        "end_time": "10:00"
+      },
+      {
+        "id": "D1_PM",
+        "date": "2026-12-01",
+        "start_time": "11:00",
+        "end_time": "12:00"
+      },
+      {
+        "id": "D2_AM",
+        "date": "2026-12-02",
+        "start_time": "09:00",
+        "end_time": "10:00"
+      },
+      {
+        "id": "D2_PM",
+        "date": "2026-12-02",
+        "start_time": "11:00",
+        "end_time": "12:00"
+      }
+    ],
+    "rooms": [
+      {
+        "id": "R1",
+        "name": "Exam Room R1",
+        "capacity": 3,
+        "unavailable": []
+      },
+      {
+        "id": "R2",
+        "name": "Exam Room R2",
+        "capacity": 4,
+        "unavailable": []
+      }
+    ],
+    "constraints": {
+      "max_exams_per_student_per_day": null,
+      "minimum_gap_minutes": 0
+    },
+    "objective": {
+      "same_day_weight": 100,
+      "short_gap_weight": 30,
+      "spare_seat_weight": 1,
+      "preferred_gap_minutes": 60
+    }
+  },
+  "metrics": {
+    "generated_nodes": 123,
+    "explored_nodes": 27,
+    "expanded_nodes": 26,
+    "candidate_actions": 208,
+    "valid_actions": 122,
+    "invalid_actions": 86,
+    "forward_pruned_actions": 0,
+    "enqueued_actions": 122,
+    "budget_blocked_actions": 0,
+    "frontier_size": 96,
+    "peak_frontier_size": 97,
+    "max_depth": 4,
+    "search_compute_ms": 53.228800012220745,
+    "preprocessing_ms": 0.0,
+    "final_validation_ms": 0.0,
+    "run_wall_ms": 0.0
+  },
+  "validation": {
+    "valid": true,
+    "violations": [],
+    "penalty": 200,
+    "breakdown": {
+      "same_day_student_pairs": 2,
+      "same_day_penalty": 200,
+      "short_gap_student_pairs": 0,
+      "short_gap_penalty": 0,
+      "total_spare_seats": 0,
+      "spare_seats_penalty": 0,
+      "total_penalty": 200
+    }
+  }
+}

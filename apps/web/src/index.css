@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Vermilion Brand Tokens */
+  --brand-primary: #E64B3C;
+  --brand-primary-hover: #CC3E31;
+  --brand-primary-pressed: #B73529;
+  --brand-primary-soft: #FFF0EC;
+  --brand-primary-border: #F4C1B8;
+
+  /* Warm Light Foundation (Workspaces) */
+  --surface-page: #F5F2EC;
+  --surface-raised: #FAF8F4;
+  --surface-card: #FFFFFF;
+  --surface-stone: #D6DCD5;
+
+  --text-primary: #202426;
+  --text-secondary: #667078;
+  --text-muted: #8A949E;
+
+  --border-default: #E7E2DA;
+  --border-subtle: #EDE8E0;
+
+  /* Semantic Status Colors */
+  --status-success: #168A65;
+  --status-success-bg: #E8F5EE;
+  --status-warning: #B7791F;
+  --status-warning-bg: #FFF4D8;
+  --status-error: #C94444;
+  --status-error-bg: #FCEAEA;
+  --status-info: #467B87;
+  --status-info-bg: #EAF3F4;
+
+  /* Motion Tokens */
+  --motion-fast: 150ms;
+  --motion-base: 220ms;
+  --motion-panel: 320ms;
+  --motion-enter: 520ms;
+
+  --ease-standard: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  color-scheme: dark light;
+}
+
+/* Dark Foundation Theme (Hero & Search Lab) */
+[data-theme="dark"], .theme-dark {
+  --surface-page: #17191A;
+  --surface-raised: #1E2224;
+  --surface-card: #292D2F;
+
+  --text-primary: #F5F2EC;
+  --text-secondary: #B9BEBC;
+  --text-muted: #7E8482;
+
+  --border-default: #373C3E;
+  --border-subtle: #292E30;
+}
+
+/* Precise Tabular Figures */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Precision Grid Background for Scientific Search Lab */
+.bg-grid-graphite {
+  background-size: 24px 24px;
+  background-image: 
+    linear-gradient(to right, rgba(55, 60, 62, 0.35) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(55, 60, 62, 0.35) 1px, transparent 1px);
+}
+
+.bg-dots-graphite {
+  background-size: 20px 20px;
+  background-image: radial-gradient(circle, rgba(185, 190, 188, 0.15) 1px, transparent 1px);
+}
+
+/* Vermilion Edition Subtle Architectural Lighting */
+.bg-vermilion-subtle-glow {
+  background: radial-gradient(circle at 50% 0%, rgba(230, 75, 60, 0.08) 0%, rgba(23, 25, 26, 0) 70%);
+}
+
+.bg-vermilion-edge-glow {
+  background: radial-gradient(circle at 100% 100%, rgba(230, 75, 60, 0.05) 0%, rgba(23, 25, 26, 0) 50%);
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(30, 34, 36, 0.7);
+}
+::-webkit-scrollbar-thumb {
+  background: #373C3E;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #E64B3C;
+}
+
+/* Motion Accessibility: Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

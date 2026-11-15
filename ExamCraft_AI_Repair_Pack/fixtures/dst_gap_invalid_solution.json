@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0",
+  "id": "audit_dst_gap",
+  "name": "Cairo spring transition minimum break",
+  "timezone": "Africa/Cairo",
+  "courses": [
+    {
+      "id": "A",
+      "code": "CS100",
+      "name": "Artificial Intelligence",
+      "duration_minutes": 30,
+      "allowed_slot_ids": [
+        "BEFORE"
+      ]
+    },
+    {
+      "id": "B",
+      "code": "CS101",
+      "name": "Algorithms",
+      "duration_minutes": 30,
+      "allowed_slot_ids": [
+        "AFTER"
+      ]
+    }
+  ],
+  "students": [
+    {
+      "id": "S1",
+      "display_name": "Sample Student S1"
+    }
+  ],
+  "enrollments": [
+    {
+      "student_id": "S1",
+      "course_id": "A"
+    },
+    {
+      "student_id": "S1",
+      "course_id": "B"
+    }
+  ],
+  "slots": [
+    {
+      "id": "BEFORE",
+      "date": "2026-04-23",
+      "start_time": "23:00",
+      "end_time": "23:30"
+    },
+    {
+      "id": "AFTER",
+      "date": "2026-04-24",
+      "start_time": "01:00",
+      "end_time": "01:30"
+    }
+  ],
+  "rooms": [
+    {
+      "id": "R1",
+      "name": "Exam Room R1",
+      "capacity": 1,
+      "unavailable": []
+    }
+  ],
+  "constraints": {
+    "max_exams_per_student_per_day": null,
+    "minimum_gap_minutes": 60
+  },
+  "objective": {
+    "same_day_weight": 100,
+    "short_gap_weight": 30,
+    "spare_seat_weight": 1,
+    "preferred_gap_minutes": 60
+  }
+}

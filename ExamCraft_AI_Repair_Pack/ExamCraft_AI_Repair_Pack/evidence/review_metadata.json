@@ -1,0 +1,36 @@
+{
+  "review_date": "2026-11-14",
+  "source_bundle": "ExamCraft_AI_Review_Bundle.zip",
+  "source_sha256": "5c3b1989ff1eec72add88718eed3f665cceaff8b7f8b4ef1b7468e9bc1a935fc",
+  "original_oracle_tests": {
+    "methods": 15,
+    "passed": 15
+  },
+  "original_application_tests": {
+    "methods": 12,
+    "passed": 12
+  },
+  "new_regressions": {
+    "methods": 12,
+    "passed": 1,
+    "failed_methods": 11,
+    "failure_records_including_subtests": 13,
+    "errors": 0,
+    "expected_baseline_exit_code": 1
+  },
+  "uncapped_tiny_oracle_crosscheck": {
+    "cases": 40,
+    "matched": 40,
+    "seed": 1827,
+    "course_counts": [
+      1,
+      2,
+      3
+    ]
+  },
+  "independent_live_browser_execution": "not completed; browser could not reach the test server",
+  "frontend_evidence": "source inspection and supplied screenshots",
+  "application_source_changed": false,
+  "python_version": "3.12.14",
+  "exact_project_dependency_installation": false
+}

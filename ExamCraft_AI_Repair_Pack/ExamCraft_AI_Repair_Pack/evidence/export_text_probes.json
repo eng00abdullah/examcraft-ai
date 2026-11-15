@@ -1,0 +1,20 @@
+{
+  "font_regular": "Helvetica",
+  "font_bold": "Helvetica-Bold",
+  "has_bidi": false,
+  "samples": [
+    {
+      "input": "Algorithms <Graphs>",
+      "output_text": "Algorithms "
+    },
+    {
+      "input": "Intro <b>",
+      "exception": "ValueError",
+      "message": "\nparagraph text '<para>Intro <b></para>' caused exception Parse error: saw </para> instead of expected </b>"
+    },
+    {
+      "input": "Research & Development",
+      "output_text": "Research & Development"
+    }
+  ]
+}

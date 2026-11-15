@@ -1,0 +1,20 @@
+{
+  "capped_astar": {
+    "status": "SUCCEEDED",
+    "penalty": 130,
+    "optimality_proven": true,
+    "budget_blocked_actions": 3
+  },
+  "terminal_event_published": {
+    "event_status": "SUCCEEDED",
+    "record_status": "RUNNING",
+    "validation": null,
+    "assignments": null,
+    "persisted": false
+  },
+  "after_worker_completion": {
+    "record_status": "SUCCEEDED",
+    "validated": true,
+    "assignments": 2
+  }
+}

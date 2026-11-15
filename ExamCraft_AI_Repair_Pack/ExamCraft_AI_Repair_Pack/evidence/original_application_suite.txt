@@ -1,0 +1,60 @@
+Full API Integration test passed successfully!
+Observed rejected action: code=room_overlap, reason=Overlaps with A in room R1
+Generated assignments: [{'course_id': 'A', 'slot_id': 'T1', 'room_id': 'R1'}, {'course_id': 'B', 'slot_id': 'T2', 'room_id': 'R1'}]
+Independent validator passed with penalty: 130
+Oracle stdout:
+ {
+  "valid": true,
+  "violations": [],
+  "penalty": 130,
+  "breakdown": {
+    "same_day_student_pairs": 1,
+    "short_gap_student_pairs": 1,
+    "spare_seats": 0,
+    "same_day_penalty": 100,
+    "short_gap_penalty": 30,
+    "spare_seat_penalty": 0
+  }
+}
+
+All 5 ground truth fixtures verified successfully!
+Pause, Step, and Cancel execution controls verified!
+Four algorithms tested on tiny_feasible:
+  BFS: penalty=130, explored=5, generated=10
+  DFS: penalty=130, explored=3, generated=6
+  GREEDY: penalty=130, explored=3, generated=6
+  ASTAR: penalty=0, explored=3, generated=6
+Heuristic admissibility and consistency verified over state space!
+Distinct statuses for LIMIT_REACHED vs INFEASIBLE verified!
+Revisions immutability and restart INTERRUPTED cleanup verified!
+Comparison benchmark verified: trials= ['bfs', 'dfs', 'greedy', 'astar'] recognitions= {'fastest_successful': 'astar', 'fewest_explored': 'dfs', 'lowest_observed_penalty': 'astar'}
+XLSX re-opened and inspected; PDF and JSON exports verified!
+Unicode and long names verified in engine, validator, XLSX, and PDF!
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+  from starlette.testclient import TestClient as TestClient  # noqa
+test_health_check (test_api_integration.ApiIntegrationTests.test_health_check) ... ok
+test_problem_create_and_run_lifecycle (test_api_integration.ApiIntegrationTests.test_problem_create_and_run_lifecycle) ... ok
+test_gate_a_dfs_slice (test_gate_a.GateATests.test_gate_a_dfs_slice) ... ok
+test_all_fixtures_ground_truth (test_gate_b.GateBTests.test_all_fixtures_ground_truth)
+Test all standard fixtures against expected ground truth. ... ok
+test_controls_pause_step_cancel (test_gate_b.GateBTests.test_controls_pause_step_cancel)
+Verify that: ... ok
+test_four_algorithms_on_tiny_feasible (test_gate_b.GateBTests.test_four_algorithms_on_tiny_feasible)
+Verify that: ... ok
+test_heuristic_admissibility_and_consistency (test_gate_b.GateBTests.test_heuristic_admissibility_and_consistency)
+Verify: ... ok
+test_resource_limits_vs_exhaustion (test_gate_b.GateBTests.test_resource_limits_vs_exhaustion)
+Verify that a resource limit produces LIMIT_REACHED, ... ok
+test_revision_immutability_and_restart (test_gate_b.GateBTests.test_revision_immutability_and_restart)
+Verify that editing data creates a new revision with new hash, ... ok
+test_comparison_endpoint (test_gate_c.GateCTests.test_comparison_endpoint)
+Verify POST /api/comparisons executes genuine sequential benchmark ... ok
+test_exports_and_inspection (test_gate_c.GateCTests.test_exports_and_inspection)
+Verify PDF, XLSX, and JSON exports from a real solved run: ... ok
+test_unicode_and_long_name_handling (test_gate_c.GateCTests.test_unicode_and_long_name_handling)
+Verify that non-ASCII Unicode (e.g. Arabic) and very long course names ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 1.078s
+
+OK

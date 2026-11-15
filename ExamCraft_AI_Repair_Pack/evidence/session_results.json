@@ -1,0 +1,38 @@
+{
+  "fast": {
+    "status": "SUCCEEDED",
+    "compute_ms": 0.5266650000521622,
+    "run_wall_ms": 0.0,
+    "final_validation_ms": 0.0,
+    "events": 12
+  },
+  "paced_20ms": {
+    "status": "LIMIT_REACHED",
+    "compute_ms": 101.71274699996502,
+    "run_wall_ms": 0.0,
+    "final_validation_ms": 0.0,
+    "events": 6
+  },
+  "paused_wall_limit": {
+    "max_wall_seconds": 0.1,
+    "waited_after_pause_seconds": 0.25,
+    "status": "PAUSED",
+    "worker_alive": true,
+    "sequence_before": 2,
+    "sequence_after": 2
+  },
+  "active_run_persisted": false,
+  "restart_cleanup_finds_actual_run": false,
+  "false_pause_ack": {
+    "pause_duration_seconds": 0.5,
+    "reported_status": "PAUSED",
+    "worker_pause_ack": false
+  },
+  "successful_final_record": {
+    "status": "SUCCEEDED",
+    "compute_ms": 0.6456950000028883,
+    "run_wall_ms": 0.0,
+    "final_validation_ms": 0.0,
+    "events": 12
+  }
+}

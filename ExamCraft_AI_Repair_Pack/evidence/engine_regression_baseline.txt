@@ -1,0 +1,89 @@
+test_already_generated_goal_does_not_consume_another_expansion (test_engine_regressions.EngineRegressionTests.test_already_generated_goal_does_not_consume_another_expansion) ... 
+  test_already_generated_goal_does_not_consume_another_expansion (test_engine_regressions.EngineRegressionTests.test_already_generated_goal_does_not_consume_another_expansion) (limits={'max_generated_nodes': 2}) ... FAIL
+  test_already_generated_goal_does_not_consume_another_expansion (test_engine_regressions.EngineRegressionTests.test_already_generated_goal_does_not_consume_another_expansion) (limits={'max_expanded_nodes': 1}) ... FAIL
+test_boolean_room_capacity_is_rejected_without_coercion (test_engine_regressions.EngineRegressionTests.test_boolean_room_capacity_is_rejected_without_coercion) ... FAIL
+test_dst_elapsed_break_is_checked_independently_and_by_engine (test_engine_regressions.EngineRegressionTests.test_dst_elapsed_break_is_checked_independently_and_by_engine) ... 
+  test_dst_elapsed_break_is_checked_independently_and_by_engine (test_engine_regressions.EngineRegressionTests.test_dst_elapsed_break_is_checked_independently_and_by_engine) (component='complete_validator') ... FAIL
+  test_dst_elapsed_break_is_checked_independently_and_by_engine (test_engine_regressions.EngineRegressionTests.test_dst_elapsed_break_is_checked_independently_and_by_engine) (component='search_engine') ... FAIL
+test_frontier_cap_cannot_prove_a_feasible_problem_infeasible (test_engine_regressions.EngineRegressionTests.test_frontier_cap_cannot_prove_a_feasible_problem_infeasible) ... FAIL
+test_frontier_cap_cannot_return_a_suboptimal_exact_astar_success (test_engine_regressions.EngineRegressionTests.test_frontier_cap_cannot_return_a_suboptimal_exact_astar_success) ... FAIL
+test_generated_node_budget_is_never_exceeded (test_engine_regressions.EngineRegressionTests.test_generated_node_budget_is_never_exceeded) ... FAIL
+test_uncapped_astar_matches_independent_zero_optimum (test_engine_regressions.EngineRegressionTests.test_uncapped_astar_matches_independent_zero_optimum) ... ok
+
+======================================================================
+FAIL: test_already_generated_goal_does_not_consume_another_expansion (test_engine_regressions.EngineRegressionTests.test_already_generated_goal_does_not_consume_another_expansion) (limits={'max_generated_nodes': 2})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/adcf59066b40/review/ExamCraft_AI_Repair_Pack/tests/test_engine_regressions.py", line 129, in test_already_generated_goal_does_not_consume_another_expansion
+    self.assertEqual(final.status, "SUCCEEDED")
+AssertionError: 'LIMIT_REACHED' != 'SUCCEEDED'
+- LIMIT_REACHED
++ SUCCEEDED
+
+
+======================================================================
+FAIL: test_already_generated_goal_does_not_consume_another_expansion (test_engine_regressions.EngineRegressionTests.test_already_generated_goal_does_not_consume_another_expansion) (limits={'max_expanded_nodes': 1})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/adcf59066b40/review/ExamCraft_AI_Repair_Pack/tests/test_engine_regressions.py", line 129, in test_already_generated_goal_does_not_consume_another_expansion
+    self.assertEqual(final.status, "SUCCEEDED")
+AssertionError: 'LIMIT_REACHED' != 'SUCCEEDED'
+- LIMIT_REACHED
++ SUCCEEDED
+
+
+======================================================================
+FAIL: test_boolean_room_capacity_is_rejected_without_coercion (test_engine_regressions.EngineRegressionTests.test_boolean_room_capacity_is_rejected_without_coercion)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/adcf59066b40/review/ExamCraft_AI_Repair_Pack/tests/test_engine_regressions.py", line 160, in test_boolean_room_capacity_is_rejected_without_coercion
+    self.assertTrue(
+AssertionError: [] is not true : Boolean capacity must not be silently converted to integer 1
+
+======================================================================
+FAIL: test_dst_elapsed_break_is_checked_independently_and_by_engine (test_engine_regressions.EngineRegressionTests.test_dst_elapsed_break_is_checked_independently_and_by_engine) (component='complete_validator')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/adcf59066b40/review/ExamCraft_AI_Repair_Pack/tests/test_engine_regressions.py", line 148, in test_dst_elapsed_break_is_checked_independently_and_by_engine
+    self.assertFalse(checked["valid"], "UTC elapsed break must govern validity")
+AssertionError: True is not false : UTC elapsed break must govern validity
+
+======================================================================
+FAIL: test_dst_elapsed_break_is_checked_independently_and_by_engine (test_engine_regressions.EngineRegressionTests.test_dst_elapsed_break_is_checked_independently_and_by_engine) (component='search_engine')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/adcf59066b40/review/ExamCraft_AI_Repair_Pack/tests/test_engine_regressions.py", line 151, in test_dst_elapsed_break_is_checked_independently_and_by_engine
+    self.assertEqual(final.status, "INFEASIBLE")
+AssertionError: 'SUCCEEDED' != 'INFEASIBLE'
+- SUCCEEDED
++ INFEASIBLE
+
+
+======================================================================
+FAIL: test_frontier_cap_cannot_prove_a_feasible_problem_infeasible (test_engine_regressions.EngineRegressionTests.test_frontier_cap_cannot_prove_a_feasible_problem_infeasible)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/adcf59066b40/review/ExamCraft_AI_Repair_Pack/tests/test_engine_regressions.py", line 98, in test_frontier_cap_cannot_prove_a_feasible_problem_infeasible
+    self.assertIn(
+AssertionError: 'INFEASIBLE' not found in ('LIMIT_REACHED', 'SUCCEEDED') : A dropped unexplored branch does not establish global infeasibility
+
+======================================================================
+FAIL: test_frontier_cap_cannot_return_a_suboptimal_exact_astar_success (test_engine_regressions.EngineRegressionTests.test_frontier_cap_cannot_return_a_suboptimal_exact_astar_success)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/adcf59066b40/review/ExamCraft_AI_Repair_Pack/tests/test_engine_regressions.py", line 87, in test_frontier_cap_cannot_return_a_suboptimal_exact_astar_success
+    self.assertEqual(
+AssertionError: 130 != 0 : Discarding frontier branches must not produce an exact A* success
+
+======================================================================
+FAIL: test_generated_node_budget_is_never_exceeded (test_engine_regressions.EngineRegressionTests.test_generated_node_budget_is_never_exceeded)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/adcf59066b40/review/ExamCraft_AI_Repair_Pack/tests/test_engine_regressions.py", line 110, in test_generated_node_budget_is_never_exceeded
+    self.assertLessEqual(
+AssertionError: 3 not less than or equal to 2 : Buffered children must consume generation budget before allocation
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.009s
+
+FAILED (failures=8)

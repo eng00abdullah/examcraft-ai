@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0",
+  "id": "tiny_feasible",
+  "name": "Tiny Feasible",
+  "timezone": "Africa/Cairo",
+  "courses": [
+    {
+      "id": "A",
+      "code": "CS100",
+      "name": "Artificial Intelligence",
+      "duration_minutes": 60
+    },
+    {
+      "id": "B",
+      "code": "CS101",
+      "name": "Algorithms",
+      "duration_minutes": 60
+    }
+  ],
+  "students": [
+    {
+      "id": "S1",
+      "display_name": "Sample Student S1"
+    }
+  ],
+  "enrollments": [
+    {
+      "student_id": "S1",
+      "course_id": "A"
+    },
+    {
+      "student_id": "S1",
+      "course_id": "B"
+    }
+  ],
+  "slots": [
+    {
+      "id": "T1",
+      "date": "2026-12-01",
+      "start_time": "09:00",
+      "end_time": "10:00"
+    },
+    {
+      "id": "T2",
+      "date": "2026-12-01",
+      "start_time": "10:00",
+      "end_time": "11:00"
+    },
+    {
+      "id": "T3",
+      "date": "2026-12-02",
+      "start_time": "09:00",
+      "end_time": "10:00"
+    }
+  ],
+  "rooms": [
+    {
+      "id": "R1",
+      "name": "Exam Room R1",
+      "capacity": 1,
+      "unavailable": []
+    }
+  ],
+  "constraints": {
+    "max_exams_per_student_per_day": null,
+    "minimum_gap_minutes": 0
+  },
+  "objective": {
+    "same_day_weight": 100,
+    "short_gap_weight": 30,
+    "spare_seat_weight": 1,
+    "preferred_gap_minutes": 60
+  }
+}

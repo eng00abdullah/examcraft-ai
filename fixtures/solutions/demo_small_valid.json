@@ -1,0 +1,24 @@
+{
+  "assignments": [
+    {
+      "course_id": "A",
+      "slot_id": "D1_AM",
+      "room_id": "R1"
+    },
+    {
+      "course_id": "B",
+      "slot_id": "D1_PM",
+      "room_id": "R1"
+    },
+    {
+      "course_id": "C",
+      "slot_id": "D2_AM",
+      "room_id": "R1"
+    },
+    {
+      "course_id": "D",
+      "slot_id": "D2_PM",
+      "room_id": "R1"
+    }
+  ]
+}

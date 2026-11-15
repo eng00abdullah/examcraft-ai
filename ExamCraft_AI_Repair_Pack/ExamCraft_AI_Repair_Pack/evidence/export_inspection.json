@@ -1,0 +1,72 @@
+{
+  "tiny_feasible_timetable": {
+    "pages": 1,
+    "pdf_text": "ExamCraft AI — Examination Timetable\nProblem: Tiny Feasible | Algorithm: ASTAR | Status: VALIDATED (Optimal Proven) | Penalty: 0 | Revision: rev_tiny\nCourse Code\nCourse Name\nDate\nTime Interval\nDuration\nRoom\nStudents\nCS100\nArtificial Intelligence\n2026-12-01\n09:00 – 10:00\n60m\nExam Room R1 (R1)\n1 / 1\nCS101\nAlgorithms\n2026-12-02\n09:00 – 10:00\n60m\nExam Room R1 (R1)\n1 / 1\nPage 1 of 1\nExamCraft AI — Intelligent Examination Scheduling System\n",
+    "xlsx_sheets": [
+      "Timetable",
+      "Run Summary"
+    ],
+    "xlsx_cells": {
+      "C2": {
+        "value": "2026-12-01",
+        "data_type": "s",
+        "format": "General"
+      },
+      "D2": {
+        "value": "09:00",
+        "data_type": "s",
+        "format": "General"
+      },
+      "E2": {
+        "value": "10:00",
+        "data_type": "s",
+        "format": "General"
+      },
+      "F2": {
+        "value": "60",
+        "data_type": "n",
+        "format": "General"
+      },
+      "H2": {
+        "value": "Exam Room R1",
+        "data_type": "s",
+        "format": "General"
+      }
+    }
+  },
+  "demo_small_timetable": {
+    "pages": 1,
+    "pdf_text": "ExamCraft AI — Examination Timetable\nProblem: Demo Small | Algorithm: ASTAR | Status: VALIDATED (Optimal Proven) | Penalty: 200 | Revision: rev_demo\nCourse Code\nCourse Name\nDate\nTime Interval\nDuration\nRoom\nStudents\nCS100\nArtificial Intelligence\n2026-12-01\n09:00 – 10:00\n60m\nExam Room R1 (R1)\n3 / 3\nCS101\nAlgorithms\n2026-12-01\n11:00 – 12:00\n60m\nExam Room R1 (R1)\n3 / 3\nCS102\nDatabase Systems\n2026-12-02\n09:00 – 10:00\n60m\nExam Room R1 (R1)\n3 / 3\nCS103\nSoftware Engineering\n2026-12-02\n11:00 – 12:00\n60m\nExam Room R1 (R1)\n3 / 3\nPage 1 of 1\nExamCraft AI — Intelligent Examination Scheduling System\n",
+    "xlsx_sheets": [
+      "Timetable",
+      "Run Summary"
+    ],
+    "xlsx_cells": {
+      "C2": {
+        "value": "2026-12-01",
+        "data_type": "s",
+        "format": "General"
+      },
+      "D2": {
+        "value": "09:00",
+        "data_type": "s",
+        "format": "General"
+      },
+      "E2": {
+        "value": "10:00",
+        "data_type": "s",
+        "format": "General"
+      },
+      "F2": {
+        "value": "60",
+        "data_type": "n",
+        "format": "General"
+      },
+      "H2": {
+        "value": "Exam Room R1",
+        "data_type": "s",
+        "format": "General"
+      }
+    }
+  }
+}

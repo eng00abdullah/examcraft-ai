@@ -1,0 +1,283 @@
+{
+  "frontier_cap_returns_suboptimal_success": {
+    "capped": {
+      "structural_errors": [],
+      "status": "SUCCEEDED",
+      "metrics": {
+        "generated_nodes": 3,
+        "explored_nodes": 3,
+        "expanded_nodes": 2,
+        "candidate_actions": 6,
+        "valid_actions": 5,
+        "invalid_actions": 1,
+        "forward_pruned_actions": 0,
+        "enqueued_actions": 2,
+        "budget_blocked_actions": 3,
+        "frontier_size": 0,
+        "peak_frontier_size": 1,
+        "max_depth": 2,
+        "search_compute_ms": 0.4352270000254066,
+        "preprocessing_ms": 0.0,
+        "final_validation_ms": 0.0,
+        "run_wall_ms": 0.0
+      },
+      "reason": null,
+      "assignments": [
+        {
+          "course_id": "A",
+          "slot_id": "T1",
+          "room_id": "R1"
+        },
+        {
+          "course_id": "B",
+          "slot_id": "T2",
+          "room_id": "R1"
+        }
+      ],
+      "production_validation": {
+        "valid": true,
+        "violations": [],
+        "penalty": 130,
+        "breakdown": {
+          "same_day_student_pairs": 1,
+          "same_day_penalty": 100,
+          "short_gap_student_pairs": 1,
+          "short_gap_penalty": 30,
+          "total_spare_seats": 0,
+          "spare_seats_penalty": 0,
+          "total_penalty": 130
+        }
+      },
+      "oracle_validation": {
+        "valid": true,
+        "violations": [],
+        "penalty": 130,
+        "breakdown": {
+          "same_day_student_pairs": 1,
+          "short_gap_student_pairs": 1,
+          "spare_seats": 0,
+          "same_day_penalty": 100,
+          "short_gap_penalty": 30,
+          "spare_seat_penalty": 0
+        }
+      }
+    },
+    "independent_ground_truth": {
+      "status": "OPTIMAL",
+      "candidate_count": 9,
+      "feasible_count": 6,
+      "optimal_penalty": 0,
+      "assignments": [
+        {
+          "course_id": "A",
+          "slot_id": "T1",
+          "room_id": "R1"
+        },
+        {
+          "course_id": "B",
+          "slot_id": "T3",
+          "room_id": "R1"
+        }
+      ]
+    }
+  },
+  "frontier_cap_false_infeasible": {
+    "capped": {
+      "structural_errors": [],
+      "status": "INFEASIBLE",
+      "metrics": {
+        "generated_nodes": 2,
+        "explored_nodes": 2,
+        "expanded_nodes": 2,
+        "candidate_actions": 4,
+        "valid_actions": 3,
+        "invalid_actions": 1,
+        "forward_pruned_actions": 1,
+        "enqueued_actions": 1,
+        "budget_blocked_actions": 1,
+        "frontier_size": 0,
+        "peak_frontier_size": 1,
+        "max_depth": 1,
+        "search_compute_ms": 0.249556999960987,
+        "preprocessing_ms": 0.0,
+        "final_validation_ms": 0.0,
+        "run_wall_ms": 0.0
+      },
+      "reason": "Frontier exhausted with no complete feasible schedule found",
+      "assignments": null
+    },
+    "independent_ground_truth": {
+      "status": "OPTIMAL",
+      "candidate_count": 8,
+      "feasible_count": 2,
+      "optimal_penalty": 130,
+      "assignments": [
+        {
+          "course_id": "A",
+          "slot_id": "T3",
+          "room_id": "R1"
+        },
+        {
+          "course_id": "B",
+          "slot_id": "T1",
+          "room_id": "R1"
+        },
+        {
+          "course_id": "C",
+          "slot_id": "T2",
+          "room_id": "R1"
+        }
+      ]
+    }
+  },
+  "generated_cap_overshoot": {
+    "structural_errors": [],
+    "status": "LIMIT_REACHED",
+    "metrics": {
+      "generated_nodes": 4,
+      "explored_nodes": 1,
+      "expanded_nodes": 1,
+      "candidate_actions": 3,
+      "valid_actions": 3,
+      "invalid_actions": 0,
+      "forward_pruned_actions": 0,
+      "enqueued_actions": 3,
+      "budget_blocked_actions": 0,
+      "frontier_size": 3,
+      "peak_frontier_size": 3,
+      "max_depth": 1,
+      "search_compute_ms": 0.32786500014481135,
+      "preprocessing_ms": 0.0,
+      "final_validation_ms": 0.0,
+      "run_wall_ms": 0.0
+    },
+    "reason": "Generated node cap (2) reached",
+    "assignments": null
+  },
+  "dst_gap_invalid_solution_accepted": {
+    "structural_errors": [],
+    "status": "SUCCEEDED",
+    "metrics": {
+      "generated_nodes": 3,
+      "explored_nodes": 3,
+      "expanded_nodes": 2,
+      "candidate_actions": 2,
+      "valid_actions": 2,
+      "invalid_actions": 0,
+      "forward_pruned_actions": 0,
+      "enqueued_actions": 2,
+      "budget_blocked_actions": 0,
+      "frontier_size": 0,
+      "peak_frontier_size": 1,
+      "max_depth": 2,
+      "search_compute_ms": 0.10582000004433212,
+      "preprocessing_ms": 0.0,
+      "final_validation_ms": 0.0,
+      "run_wall_ms": 0.0
+    },
+    "reason": null,
+    "assignments": [
+      {
+        "course_id": "A",
+        "slot_id": "BEFORE",
+        "room_id": "R1"
+      },
+      {
+        "course_id": "B",
+        "slot_id": "AFTER",
+        "room_id": "R1"
+      }
+    ],
+    "production_validation": {
+      "valid": true,
+      "violations": [],
+      "penalty": 0,
+      "breakdown": {
+        "same_day_student_pairs": 0,
+        "same_day_penalty": 0,
+        "short_gap_student_pairs": 0,
+        "short_gap_penalty": 0,
+        "total_spare_seats": 0,
+        "spare_seats_penalty": 0,
+        "total_penalty": 0
+      }
+    },
+    "oracle_validation": {
+      "valid": false,
+      "violations": [
+        {
+          "code": "minimum_gap",
+          "message": "Shared students do not receive the configured hard break.",
+          "course_ids": [
+            "A",
+            "B"
+          ],
+          "gap_minutes": 30.0
+        }
+      ],
+      "penalty": null,
+      "breakdown": null
+    }
+  },
+  "boolean_capacity_coercion": {
+    "structural_errors": [],
+    "status": "SUCCEEDED",
+    "metrics": {
+      "generated_nodes": 6,
+      "explored_nodes": 3,
+      "expanded_nodes": 2,
+      "candidate_actions": 6,
+      "valid_actions": 5,
+      "invalid_actions": 1,
+      "forward_pruned_actions": 0,
+      "enqueued_actions": 5,
+      "budget_blocked_actions": 0,
+      "frontier_size": 3,
+      "peak_frontier_size": 4,
+      "max_depth": 2,
+      "search_compute_ms": 0.29285200002959755,
+      "preprocessing_ms": 0.0,
+      "final_validation_ms": 0.0,
+      "run_wall_ms": 0.0
+    },
+    "reason": null,
+    "assignments": [
+      {
+        "course_id": "A",
+        "slot_id": "T1",
+        "room_id": "R1"
+      },
+      {
+        "course_id": "B",
+        "slot_id": "T3",
+        "room_id": "R1"
+      }
+    ],
+    "production_validation": {
+      "valid": true,
+      "violations": [],
+      "penalty": 0,
+      "breakdown": {
+        "same_day_student_pairs": 0,
+        "same_day_penalty": 0,
+        "short_gap_student_pairs": 0,
+        "short_gap_penalty": 0,
+        "total_spare_seats": 0,
+        "spare_seats_penalty": 0,
+        "total_penalty": 0
+      }
+    },
+    "oracle_validation": {
+      "valid": false,
+      "violations": [
+        {
+          "code": "capacity",
+          "message": "Room capacity must be a positive integer.",
+          "room_id": "R1"
+        }
+      ],
+      "penalty": null,
+      "breakdown": null
+    }
+  }
+}

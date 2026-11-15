@@ -1,0 +1,8 @@
+{
+  "pause_call_seconds": 0.5002966110000671,
+  "session_status": "PAUSED",
+  "worker_alive": false,
+  "stored_status": "SUCCEEDED",
+  "next_run_blocked": true,
+  "status_after_cancel": "PAUSED"
+}

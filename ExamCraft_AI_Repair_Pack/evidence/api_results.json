@@ -1,0 +1,36 @@
+{
+  "invalid_run_config": {
+    "http_status": 500,
+    "body": "Internal Server Error"
+  },
+  "comparison": {
+    "elapsed_ms": 4.825627000172972,
+    "callback_during_run": false,
+    "statuses": [
+      "SUCCEEDED",
+      "SUCCEEDED",
+      "SUCCEEDED",
+      "SUCCEEDED"
+    ],
+    "generated_counts": [
+      10,
+      6,
+      6,
+      6
+    ],
+    "config_persisted": [
+      "comparison_id",
+      "revision_id",
+      "problem_hash",
+      "method",
+      "trials",
+      "recognitions"
+    ],
+    "callback_delay_ms": 4.861851999976352
+  },
+  "repeated_step_id": {
+    "before": 1,
+    "after_first": 2,
+    "after_same_request_retried": 3
+  }
+}

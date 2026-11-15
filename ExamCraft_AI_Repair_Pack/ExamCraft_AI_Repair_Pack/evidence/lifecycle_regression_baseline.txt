@@ -1,0 +1,61 @@
+test_actual_active_run_survives_process_restart_as_interrupted (test_lifecycle_regressions.LifecycleRegressionTests.test_actual_active_run_survives_process_restart_as_interrupted) ... FAIL
+test_pause_cannot_resurrect_a_completed_run (test_lifecycle_regressions.LifecycleRegressionTests.test_pause_cannot_resurrect_a_completed_run) ... FAIL
+test_success_event_is_published_only_after_validation_and_persistence (test_lifecycle_regressions.LifecycleRegressionTests.test_success_event_is_published_only_after_validation_and_persistence) ... FAIL
+test_teaching_delay_does_not_consume_compute_budget (test_lifecycle_regressions.LifecycleRegressionTests.test_teaching_delay_does_not_consume_compute_budget) ... FAIL
+test_wall_deadline_terminates_an_abandoned_paused_session (test_lifecycle_regressions.LifecycleRegressionTests.test_wall_deadline_terminates_an_abandoned_paused_session) ... FAIL
+
+======================================================================
+FAIL: test_actual_active_run_survives_process_restart_as_interrupted (test_lifecycle_regressions.LifecycleRegressionTests.test_actual_active_run_survives_process_restart_as_interrupted)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/adcf59066b40/review/ExamCraft_AI_Repair_Pack/tests/test_lifecycle_regressions.py", line 151, in test_actual_active_run_survives_process_restart_as_interrupted
+    self.assertIsNotNone(persisted, "A real active run must be durable before the backend can crash")
+AssertionError: unexpectedly None : A real active run must be durable before the backend can crash
+
+======================================================================
+FAIL: test_pause_cannot_resurrect_a_completed_run (test_lifecycle_regressions.LifecycleRegressionTests.test_pause_cannot_resurrect_a_completed_run)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/adcf59066b40/review/ExamCraft_AI_Repair_Pack/tests/test_lifecycle_regressions.py", line 222, in test_pause_cannot_resurrect_a_completed_run
+    self.assertEqual(session.status, "SUCCEEDED", "A late pause must not overwrite terminal state with PAUSED")
+AssertionError: 'PAUSED' != 'SUCCEEDED'
+- PAUSED
++ SUCCEEDED
+ : A late pause must not overwrite terminal state with PAUSED
+
+======================================================================
+FAIL: test_success_event_is_published_only_after_validation_and_persistence (test_lifecycle_regressions.LifecycleRegressionTests.test_success_event_is_published_only_after_validation_and_persistence)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/adcf59066b40/review/ExamCraft_AI_Repair_Pack/tests/test_lifecycle_regressions.py", line 186, in test_success_event_is_published_only_after_validation_and_persistence
+    self.assertEqual(observed["status"], "SUCCEEDED", "Terminal event must agree with the authoritative run record")
+AssertionError: 'RUNNING' != 'SUCCEEDED'
+- RUNNING
++ SUCCEEDED
+ : Terminal event must agree with the authoritative run record
+
+======================================================================
+FAIL: test_teaching_delay_does_not_consume_compute_budget (test_lifecycle_regressions.LifecycleRegressionTests.test_teaching_delay_does_not_consume_compute_budget)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/adcf59066b40/review/ExamCraft_AI_Repair_Pack/tests/test_lifecycle_regressions.py", line 104, in test_teaching_delay_does_not_consume_compute_budget
+    self.assertEqual(
+AssertionError: 'LIMIT_REACHED' != 'SUCCEEDED'
+- LIMIT_REACHED
++ SUCCEEDED
+ : Teaching sleeps must not turn an otherwise sub-budget search into LIMIT_REACHED
+
+======================================================================
+FAIL: test_wall_deadline_terminates_an_abandoned_paused_session (test_lifecycle_regressions.LifecycleRegressionTests.test_wall_deadline_terminates_an_abandoned_paused_session)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/adcf59066b40/review/ExamCraft_AI_Repair_Pack/tests/test_lifecycle_regressions.py", line 197, in test_wall_deadline_terminates_an_abandoned_paused_session
+    self.wait_for(lambda: session.status in TERMINAL, timeout=1.2,
+  File "/workspace/scratch/adcf59066b40/review/ExamCraft_AI_Repair_Pack/tests/test_lifecycle_regressions.py", line 89, in wait_for
+    self.fail(message)
+AssertionError: Paused session ignored max_wall_seconds and kept its worker alive
+
+----------------------------------------------------------------------
+Ran 5 tests in 2.608s
+
+FAILED (failures=5)
